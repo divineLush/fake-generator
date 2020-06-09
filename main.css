@@ -1,0 +1,11 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.app {
+    height: 100vh;
+    font-family: monospace;
+    color: white;
+    background-color: green;
+}
