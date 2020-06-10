@@ -1,6 +1,4 @@
 
-document.querySelector(".app__btn").addEventListener("click", click);
-
 const click = async () => {
     const proxyUrl = "https://cors-anywhere.herokuapp.com/";
     const apiUrl = "https://api.namefake.com/english-united-states/female/";
@@ -8,6 +6,9 @@ const click = async () => {
     const json = await fetchAsync(url);
     console.log(json);
 }
+
+document.querySelector(".app__btn").addEventListener("click", click);
+
 
 const fetchAsync = async (url) => {
     let response = await fetch(url);
