@@ -8,41 +8,38 @@
 body {
     margin: 0;
     padding: 0;
-}
-
-.app {
     height: 100vh;
     font-family: monospace;
     color: black;
     background-color: #d2f8d6;
 }
 
-.app__header {
+.header {
     height: 30vh;
 }
 
-.app__header__title {
+.header__title {
     color: #7264e7;
     font-weight: bold;
     font-family: sans-serif;
 }
 
-.app__header__text {
+.header__text {
     margin-bottom: 0;
 }
 
-.app__content {
+.content {
     height: 60vh;
 }
 
-.app__btn {
+.btn {
     border: 5px solid #6fcf97;
     background-color: #d2f8d6;
     cursor: pointer;
     padding: 7px 20px;
 }
 
-.app__btn:hover {
+.btn:hover {
     border-color: #7264e7; 
     background-color: #7264e7;
     color: #d2f8d6;
