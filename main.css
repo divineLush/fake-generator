@@ -32,15 +32,28 @@ body {
     height: 60vh;
 }
 
-.btn {
+.content__control-panel {
+    flex-direction: row;
+}
+
+.content__control-panel__btn {
     border: 5px solid #6fcf97;
     background-color: #d2f8d6;
     cursor: pointer;
     padding: 7px 20px;
+    width: 20vh;
 }
 
-.btn:hover {
+.content__control-panel__btn:hover {
     border-color: #7264e7; 
     background-color: #7264e7;
     color: #d2f8d6;
+}
+
+.content__results-container {
+    height: 50vh;
+}
+
+.content__results-container__result-text {
+    padding: 7px 0;
 }

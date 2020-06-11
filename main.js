@@ -1,9 +1,26 @@
 const apiUrl = "https://randomuser.me/api/";
+const resultsContainerClass = '.content__results-container';
 
-const onClick = async (genderString) => {
-    let gender = getKeyByValue(genders, genderString);
-    var response = await generateIdentity(gender);
-    var result = response.results[0];
+const onClick = async () => {
+    const getKeyByValue = (object, value) =>
+        Object.keys(object).find(key => object[key] === value);
+
+    const generateIdentity = async (gender) => {
+        const callApi = async (url) => {
+            const response = await fetch(url);
+            return response.json();
+        }
+
+        let url = apiUrl;
+        if (gender)
+            url += `?gender=${gender}`;
+
+        return await callApi(url)
+    }
+
+    const gender = getKeyByValue(genders, genderString);
+    const response = await generateIdentity(gender);
+    const result = response.results[0];
 
     const idendtity = {
         email : result.email,
@@ -17,23 +34,19 @@ const onClick = async (genderString) => {
         phone : result.phone
     }
 
+    document.querySelector(resultsContainerClass).innerHTML = '';
     appendProperties(idendtity);
     console.log(response);
 }
 
-document.querySelector(".btn").addEventListener("click", onClick);
-window.addEventListener('keydown', event => {
-    if (event.keyCode === 13)
-        onClick("male")
-});
-
 const appendProperties = (obj) => {
     Object.keys(obj).forEach(key => {
-        if (typeof obj[key] === 'object') {
+        if (typeof obj[key] === 'object')
             appendProperties(obj[key])
-        } else {
-        document.querySelector('main').insertAdjacentHTML('beforeend', `<p>${key} : ${obj[key]}</p>`);
-        }
+        else
+            document
+                .querySelector(resultsContainerClass)
+                .insertAdjacentHTML('beforeend', `<p style="margin: 7px 0">${key} : ${obj[key]}</p>`);
     })
 }
 
@@ -42,22 +55,18 @@ const genders = {
     FEMALE: 'female'
 }
 
-const generateIdentity = async (gender) => {
-    let url = apiUrl;
+document
+    .querySelector(".content__control-panel__btn")
+    .addEventListener("click", onClick);
 
-    if (gender) {
-        url += `?gender=${gender}`;
-    }
+window.addEventListener('keydown', event => {
+    if (event.keyCode === 13)
+        onClick("male")
+});
 
-    var jsonIdentity = await callApi(url);
-    return jsonIdentity;
-}
-
-const callApi = async (url) => {
-    const response = await fetch(url);
-    return response.json();
-};
-
-const getKeyByValue = (object, value) => Object.keys(object).find(key => object[key] === value);
-
-
+document.querySelector('#nonbinary').checked = true;
+let genderString = 'nonbinary';
+document
+    .querySelectorAll('input[name="group"]')
+    .forEach(el => el
+        .addEventListener('click', e => genderString = e.currentTarget.id));
