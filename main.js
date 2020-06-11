@@ -10,7 +10,7 @@ const onClick = async () => {
     console.log(res);
 }
 
-document.querySelector(".app__btn").addEventListener("click", onClick);
+document.querySelector(".btn").addEventListener("click", onClick);
 window.addEventListener('keydown', event => {
     if (event.keyCode === 13)
         onClick()
