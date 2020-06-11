@@ -46,7 +46,7 @@ const appendProperties = (obj) => {
         else
             document
                 .querySelector(resultsContainerClass)
-                .insertAdjacentHTML('beforeend', `<p style="margin: 7px 0">${key} : ${obj[key]}</p>`);
+                .insertAdjacentHTML('beforeend', `<p style="margin: 7px 0"><strong>${key}</strong> : ${obj[key]}</p>`);
     })
 }
 
