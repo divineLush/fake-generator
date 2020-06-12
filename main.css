@@ -37,11 +37,13 @@ body {
 }
 
 .content__control-panel__btn {
-    border: 5px solid #6fcf97;
+    border: 6px solid #6fcf97;
     background-color: #d2f8d6;
     cursor: pointer;
-    padding: 7px 20px;
-    width: 20vh;
+    padding: 7px 25px;
+    width: 30vh;
+    margin-left: 10vh;
+    font-size: 6vh;
     font-family: 'Lato', Arial, Helvetica, sans-serif;
 }
 
@@ -52,7 +54,17 @@ body {
 }
 
 .content__results-container {
-    height: 50vh;
+    height: 35vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+    gap: 0 10px;
+}
+
+.content__results-container p {
+    margin: 0;
+    padding: 0;
 }
 
 .content__results-container__result-text {
