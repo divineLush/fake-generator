@@ -69,4 +69,4 @@ let genderString = 'nonbinary';
 document
     .querySelectorAll('input[name="group"]')
     .forEach(el => el
-        .addEventListener('click', e => genderString = e.currentTarget.id));
+        .addEventListener('click', e => { genderString = e.currentTarget.id; console.log(e.currentTarget.id) }));

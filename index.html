@@ -16,13 +16,22 @@
     </header>
     <main class="content centered-content">
         <div class="content__control-panel centered-content">
-            <div class="content__control-panel__radio-btns-container">
-                <input type="radio" id="male" name="group" value="male">
-                <label for="male">Male</label>
-                <input type="radio" id="female" name="group" value="female">
-                <label for="female">Female</label>
-                <input type="radio" id="nonbinary" name="group" value="dontcare">
-                <label for="nonbinary">Non-Binary</label>
+            <div>
+                <label for="male" class="container">
+                    Male
+                    <input type="radio" id="male" name="group" value="male">
+                    <span class="checkmark"></span>
+                </label>
+                <label for="female" class="container">
+                    Female
+                    <input type="radio" id="female" name="group" value="female">
+                    <span class="checkmark"></span>
+                </label>
+                <label for="nonbinary" class="container">
+                    Non-Binary
+                    <input type="radio" id="nonbinary" name="group" value="dontcare">
+                    <span class="checkmark"></span>
+                </label>
             </div>
             <button class="content__control-panel__btn">fake it</button>
         </div>
