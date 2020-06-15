@@ -7,7 +7,6 @@
 body {
     margin: 0;
     padding: 0;
-    height: 100vh;
     font-family: 'Montserrat', monospace;
     color: black;
     background-color: #d2f8d6;
@@ -63,7 +62,6 @@ body {
 }
 
 .content__results-container {
-    height: 35vh;
     justify-content: center;
 }
 
