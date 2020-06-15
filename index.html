@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake Identity Generator</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Josefin Sans">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <header style="justify-content: center;" class="header centered-content">
+        <p class="header__title">Fake Generator</p>
+        <p class="header__text">generate fake identity with ease</p>
+        <p class="header__text">indicate gender if you wish</p>
+    </header>
+    <main class="content centered-content">
+        <div class="content__control-panel centered-content">
+            <div>
+                <label for="male" class="container">
+                    Male
+                    <input type="radio" id="male" name="group" value="male">
+                    <span class="checkmark"></span>
+                </label>
+                <label for="female" class="container">
+                    Female
+                    <input type="radio" id="female" name="group" value="female">
+                    <span class="checkmark"></span>
+                </label>
+                <label for="nonbinary" class="container">
+                    Non-Binary
+                    <input type="radio" id="nonbinary" name="group" value="dontcare">
+                    <span class="checkmark"></span>
+                </label>
+            </div>
+            <button class="content__control-panel__btn">fake it</button>
+        </div>
+        <div class="content__results-container centered-content">
+            <p>Smash that fake it button...</p>
+        </div>
+    </main>
+    <script src="main.js"></script>
+</body>
+</html>
