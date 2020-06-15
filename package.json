@@ -16,7 +16,7 @@
   "bugs": {
     "url": "https://github.com/divineLush/fake-generator/issues"
   },
-  "homepage": "https://github.com/divineLush/fake-generator",
+  "homepage": "https://divineLush.github.io/fakegenerator",
   "devDependencies": {
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
