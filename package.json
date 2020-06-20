@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/divineLush/fake-generator.git"
+    "url": "git+https://github.com/divineLush/fakegenerator.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/divineLush/fake-generator/issues"
   },
-  "homepage": "http://divinelush.github.io/fake-generator/",
+  "homepage": "https://divinelush.github.io/fakegenerator",
   "devDependencies": {
     "@babel/core": "^7.10.2",
     "@babel/preset-env": "^7.10.2",
